@@ -1,0 +1,33 @@
+{ "Fecha": "01/01/2018",
+  "Valores": 
+  {
+    "producto_1": {
+      "descripcion": "Leche Entera",
+      "marca": "LA SERENISIMA",
+      "unidad": "LT",
+      "cantidad": "1.00",
+      "imagen":"http://localhost:8000/media/documents/00251050_Off3NlT.jpg",
+      "precios":{
+          "COTO":10.00,
+          "Wallmart":11.00,
+          "Disco":12.00,
+          "Jumbo":13.00,
+          "Dia":9.00
+      }
+    },
+    "producto_2": {
+    "descripcion": "Arroz Largo Fino",
+    "marca": "DOS HERMANOS",
+    "unidad": "KG",
+    "cantidad": "1.00",
+    "imagen":"http://localhost:8000/media/documents/00053908.jpg",
+    "precios":{
+        "COTO":10.00,
+        "Wallmart":11.00,
+        "Disco":12.00,
+        "Jumbo":13.00,
+        "Dia":9.00
+      }
+    }
+  }
+}
