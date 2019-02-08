@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
-
+from django_pandas.managers import DataFrameManager
 
 
 Lista_Unidades = (
@@ -39,5 +39,5 @@ class Precio(models.Model):
     precio_c_descuento = models.DecimalField(max_digits=5, decimal_places=2) 
     precio = models.DecimalField(max_digits=5, decimal_places=2) 
     url = models.URLField(db_column='URL', max_length=255, blank=True, null=True)
-
+    pdobjects = DataFrameManager() 
 

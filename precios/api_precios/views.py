@@ -2,26 +2,18 @@
 from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http import HttpResponse
+from models import Cadena, Producto, Precio
 import sqlite3
 import pandas as pd
+from django.core import serializers
 
+conn = sqlite3.connect('db.sqlite3')
+c = conn.cursor()
 
-db  = sqlite3.connect('D:\\python27\\Proyectos\\db.sqlite3')
-cursor = db.cursor()
-cursor.execute('''select* from api_precios_cadena''')
-
-print(cursor.fetchall())
-
-db.close()
+consulta_1 = serializers.serialize('json', Producto.objects.all(), fields=('producto','marca'))
+print(consulta_1)
 
 def api_precios(request):
     if request.method == 'GET':
         return HttpResponse(consulta_1)
-
-
-
-
-
-
-
 
